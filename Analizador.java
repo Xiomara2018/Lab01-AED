@@ -13,7 +13,7 @@ public class Analizador {
 
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                Sirng main = lectorArchivo.next();
+                String main = lectorArchivo.next();
                 int cantidad = lectorArchivo.nextInt();
                 double puereza = lectorArchivo.nextDouble();
 
@@ -49,9 +49,25 @@ public class Analizador {
         String [] nombres = new String[k * k];
         int tipos = 0;
 
-        for
+        for (int i = f; i < f + k; i++) {
 
-intln("Valor total: " + max);
+            for (int j = c; j < c + k; j++) {
+                System.out.println(terreno[i][j]);
+                String mineral = terreno[i][j].getMineral();
+                boolean encontrado = false;
+                for (int m = 0; m < tipos; m++) {
+                    if (nombres[m].equals(mineral)) {
+                        conteo[m]++;
+                        encontrado = true;
+                        break;
 
+                }
+            }
+        }
+        if (!encontrado) {
+            nombres[tipos] = mineral;
+            conteo[tipos] = 1;
+            tipos++;
+        }
     }
 }
