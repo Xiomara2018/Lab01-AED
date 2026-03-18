@@ -25,7 +25,7 @@ public class Analizador {
     }
     public void analizadorRegion(int k){
         double maxValor = -1;
-        int mejorFila =0, mejor Col =0;
+        int mejorFila =0, mejorCol =0;
         for (int i = 0 ; i < filas - k + 1; i++) {
             for (int j = 0; j < columnas - k + 1; j++) {
                 double sumaActual =0;
@@ -34,10 +34,24 @@ public class Analizador {
                         sumaActual += terreno[r][c].calcularValor();
                     }
                 }
-                i
-
+                if (sumaActual > maxValor) {
+                    maxValor = sumaActual;
+                    mejorFila = i;
+                    mejorCol = j;
                 }
             }
         }
+        mostrarResultado(mejorFila, mejorCol, k, maxValor);
+    }
+    private void mostrarResultado(int f , int c, int k , double max) {
+        System.out.println("La region mas valiosa es:");
+        System.out.println("Coordenada inicial: " + f + ", " + c + " )");
+        String [] nombres = new String[k * k];
+        int tipos = 0;
+
+        for
+
+intln("Valor total: " + max);
+
     }
 }
