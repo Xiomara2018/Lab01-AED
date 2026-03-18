@@ -1,0 +1,27 @@
+# Inicializa Git en tu carpeta local
+
+git init
+
+
+
+# Agrega todos tus archivos
+
+git add .
+
+
+
+# Primer commit
+
+git commit -m "Primer avance: Estructura del proyecto"
+
+
+
+# Conecta tu carpeta con el GitHub que creaste
+
+# (Copia el enlace que te salga en GitHub)
+
+git remote add origin https://github.com/Xiomara2018/Lab01-AED.git
+
+# Sube el código
+
+git push -u origin maingitg
