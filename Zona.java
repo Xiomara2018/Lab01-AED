@@ -3,7 +3,7 @@ public class Zona {
     private int cantidad;
     private double pureza;
 
-    public Zona(String mineral, int cantidad, double puerza)
+    public Zona(String mineral, int cantidad, double pureza)
     {
         this.mineral = mineral;
         this.cantidad = cantidad;
