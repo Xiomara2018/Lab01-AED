@@ -1,16 +1,16 @@
 public class Zona {
     private String mineral;
     private int cantidad;
-    private double puereza;
+    private double pureza;
 
-    public Zona(String mineral, int cantidad, double puerza)
+    public Zona(String mineral, int cantidad, double puerza, double pureza)
     {
         this.mineral = mineral;
         this.cantidad = cantidad;
-        this.puereza = puerza;
+        this.pureza = pureza;
     }
     public double calcularValor() {
-        return this.cantidad * this.puereza;
+        return this.cantidad * this.pureza;
     }
     public String getMineral() {
         return mineral;
@@ -20,7 +20,7 @@ public class Zona {
         return "Zona{" +
                 "mineral='" + mineral + '\'' +
                 ", cantidad=" + cantidad +
-                ", puereza=" + puereza +
+                ", pureza=" + pureza +
                 '}';
     }
 }

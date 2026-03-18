@@ -15,9 +15,9 @@ public class Analizador {
             for (int j = 0; j < columnas; j++) {
                 String main = lectorArchivo.next();
                 int cantidad = lectorArchivo.nextInt();
-                double puereza = lectorArchivo.nextDouble();
+                double pureza = lectorArchivo.nextDouble();
 
-                this.terreno[i][j] = new Zona(main, cantidad, puereza);
+                this.terreno[i][j] = new Zona(main, cantidad, pureza);
             }
         }
         lectorArchivo.close();
@@ -70,4 +70,14 @@ public class Analizador {
             tipos++;
         }
     }
+    String predominante = ""; maxC =0;
+    for (int m = 0; m < tipos; m++) {
+        if (conteo[m] > maxC) {
+            maxC = conteo[m];
+            predominante = nombres[m];
+        }
+    }
+    System.out.println ("Valor total: " + max);
+    System.out.println("Mineral predominante: " + predominante);
+}
 }
