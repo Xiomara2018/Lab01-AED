@@ -23,4 +23,21 @@ public class Analizador {
         lectorArchivo.close();
                 
     }
+    public void analizadorRegion(int k){
+        double maxValor = -1;
+        int mejorFila =0, mejor Col =0;
+        for (int i = 0 ; i < filas - k + 1; i++) {
+            for (int j = 0; j < columnas - k + 1; j++) {
+                double sumaActual =0;
+                for (int r =i; r < i + k; r++) {
+                    for (int c = j; c < j + k; c++) {
+                        sumaActual += terreno[r][c].calcularValor();
+                    }
+                }
+                i
+
+                }
+            }
+        }
+    }
 }
