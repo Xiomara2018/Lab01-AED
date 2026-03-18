@@ -89,3 +89,4 @@ public class Analizador {
         System.out.println ("Valor total: " + max);
         System.out.println("Mineral predominante: " + predominante);
     }
+}
